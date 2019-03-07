@@ -4,7 +4,9 @@
 
 $brown: #b88b58;
 $lightgrey: #bebebe;
-$background-grey: #ededed;
+$background-grey: #f7f7f7;
+$grey: #7e7e7e;
+$button-black: #373737;
 
 body {
     font-family: 'Montserrat', sans-serif;
@@ -24,8 +26,9 @@ section {
     background-color: $brown;
     text-transform: uppercase;
     border-radius: 27px;
+    cursor: pointer;
     &:hover {
-        background-color: black;
+        background-color: $button-black;
     }
 }
 .main-text {
@@ -47,7 +50,7 @@ section {
 }
 .title {
     text-transform: uppercase;
-    font-size: 22px;
+    font-size: 24px;
     font-weight: bold;
 }
 .media-icons-bar {
@@ -61,11 +64,17 @@ section {
         display: flex;
         align-items: center;
         justify-content: center;
-        margin: 4px;
+        margin: 3px;
         &:hover {
             background-color: $brown;
         }
     }
+}
+.paginator {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 header {
@@ -132,12 +141,6 @@ header {
         button {
             margin-bottom: 220px;
             margin-top: 40px;
-        }
-        img {
-            position: absolute;
-            bottom: 40px;
-            left: 50%;
-            transform: translateX(-50%);
         }
     }
 }
@@ -218,6 +221,8 @@ header {
     background-image: url(../images/team-background.png);
     background-repeat: no-repeat;
     background-size: cover;
+    position: relative;
+    
     .section-title {
         color: #fff;
     }
@@ -236,6 +241,126 @@ header {
             margin-top: 24px;
         }
     }
+}
+.happy-clients {
+    position: relative;
+    background-color: $background-grey;
+    .section-subtitle {
+        margin-bottom: 60px;
+    }
+    .title {
+        text-transform: none;
+    }
+    h4 {
+        margin-bottom: 40px;
+    }
+    .main-text {
+        font-weight: 300;
+    }
+}
+.logos {
+    padding-top: 25px;
+    padding-bottom: 25px;
+    border-top: 1px solid $lightgrey;
+    border-bottom: 1px solid $lightgrey;
+    .logo-box {
+        padding: 15px;
+    }
+}
+.prices {
+    background-color: $background-grey;
+    padding-bottom: 50px;
+    border-bottom: 1px solid $lightgrey;
+
+    .price-item {
+        background-color: #fff;
+        margin: 15px;
+        padding: 35px 15px;
+        .offert-name {
+            font-size: 14px;
+            line-height: 21px;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+        .price {
+            font-size: 30px;
+            line-height: 21px;
+            font-weight: bold;
+            margin-bottom: 0;
+            margin-top: 0;
+        }
+        .month {
+            text-transform: uppercase;
+            font-size: 10px;
+            line-height: 25px;
+            color: $lightgrey;
+            margin-top: 0;
+        }
+        ul {
+            padding: 0;
+            list-style-type: none;
+            text-align: center;
+            li {
+                font-size: 10px;
+                line-height: 27px;
+                color: $grey;
+                position: relative;
+                &::after {
+                    content: "";
+                    display: block;
+                    background-color: $grey;
+                    height: 1px;
+                    width: 10px;
+                    position: absolute;
+                    bottom: 0;
+                    left: 50%;
+                    transform: translateX(-50%);
+                }
+                &.last::after {
+                    display: none;
+                }
+            }
+        }
+        .main-button {
+            background-color: $button-black;
+            &:hover {
+                background-color: $brown;
+            }
+        }
+    }
+}
+.premium {
+    position: relative;
+    padding-bottom: 60px;
+    
+    .with-border {
+        border-bottom: 1px solid $lightgrey;
+        .features-list {
+            padding-bottom: 35px;
+
+            .feature-wrapper {
+                display: flex;
+                width: 100%;
+                
+                .icon-wrapper {
+                    padding: 25px;
+                }
+                .feature-text-wrapper {
+                    text-align: left;
+                    ul {
+                        list-style-type: none;
+                        padding:0;
+                    }
+                }
+            }
+        }
+    }
+    .paginator {
+        bottom: 150px;
+    }
+    .main-button {
+        margin-top: 90px;
+    }    
 }
 
 @media (min-width: 992px) {

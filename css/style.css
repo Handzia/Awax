@@ -643,10 +643,11 @@ section {
   background-color: #b88b58;
   text-transform: uppercase;
   border-radius: 27px;
+  cursor: pointer;
 }
 
 .main-button:hover {
-  background-color: black;
+  background-color: #373737;
 }
 
 .main-text {
@@ -671,7 +672,7 @@ section {
 
 .title, .services .services-item-wrapper h3 {
   text-transform: uppercase;
-  font-size: 22px;
+  font-size: 24px;
   font-weight: bold;
 }
 
@@ -692,11 +693,18 @@ section {
       align-items: center;
   -ms-flex-pack: center;
       justify-content: center;
-  margin: 4px;
+  margin: 3px;
 }
 
 .media-icons-bar .media-icon-wrapper:hover {
   background-color: #b88b58;
+}
+
+.paginator {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 header {
@@ -783,13 +791,6 @@ header .jumbotron button {
   margin-top: 40px;
 }
 
-header .jumbotron img {
-  position: absolute;
-  bottom: 40px;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
 .about .text-wrapper button {
   margin-top: 40px;
   margin-bottom: 70px;
@@ -821,7 +822,7 @@ header .jumbotron img {
 
 .projects .menu-slider {
   margin-bottom: 15px;
-  background-color: #ededed;
+  background-color: #f7f7f7;
   display: -ms-inline-flexbox;
   display: inline-flex;
   -ms-flex-pack: justify;
@@ -878,6 +879,7 @@ header .jumbotron img {
   background-image: url(../images/team-background.png);
   background-repeat: no-repeat;
   background-size: cover;
+  position: relative;
 }
 
 .team .section-title {
@@ -901,6 +903,150 @@ header .jumbotron img {
 
 .team .team-item .media-icons-bar {
   margin-top: 24px;
+}
+
+.happy-clients {
+  position: relative;
+  background-color: #f7f7f7;
+}
+
+.happy-clients .section-subtitle {
+  margin-bottom: 60px;
+}
+
+.happy-clients .title, .happy-clients .services .services-item-wrapper h3, .services .services-item-wrapper .happy-clients h3 {
+  text-transform: none;
+}
+
+.happy-clients h4 {
+  margin-bottom: 40px;
+}
+
+.happy-clients .main-text {
+  font-weight: 300;
+}
+
+.logos {
+  padding-top: 25px;
+  padding-bottom: 25px;
+  border-top: 1px solid #bebebe;
+  border-bottom: 1px solid #bebebe;
+}
+
+.logos .logo-box {
+  padding: 15px;
+}
+
+.prices {
+  background-color: #f7f7f7;
+  padding-bottom: 50px;
+  border-bottom: 1px solid #bebebe;
+}
+
+.prices .price-item {
+  background-color: #fff;
+  margin: 15px;
+  padding: 35px 15px;
+}
+
+.prices .price-item .offert-name {
+  font-size: 14px;
+  line-height: 21px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.prices .price-item .price {
+  font-size: 30px;
+  line-height: 21px;
+  font-weight: bold;
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+.prices .price-item .month {
+  text-transform: uppercase;
+  font-size: 10px;
+  line-height: 25px;
+  color: #bebebe;
+  margin-top: 0;
+}
+
+.prices .price-item ul {
+  padding: 0;
+  list-style-type: none;
+  text-align: center;
+}
+
+.prices .price-item ul li {
+  font-size: 10px;
+  line-height: 27px;
+  color: #7e7e7e;
+  position: relative;
+}
+
+.prices .price-item ul li::after {
+  content: "";
+  display: block;
+  background-color: #7e7e7e;
+  height: 1px;
+  width: 10px;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.prices .price-item ul li.last::after {
+  display: none;
+}
+
+.prices .price-item .main-button {
+  background-color: #373737;
+}
+
+.prices .price-item .main-button:hover {
+  background-color: #b88b58;
+}
+
+.premium {
+  position: relative;
+  padding-bottom: 60px;
+}
+
+.premium .with-border {
+  border-bottom: 1px solid #bebebe;
+}
+
+.premium .with-border .features-list {
+  padding-bottom: 35px;
+}
+
+.premium .with-border .features-list .feature-wrapper {
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+}
+
+.premium .with-border .features-list .feature-wrapper .icon-wrapper {
+  padding: 25px;
+}
+
+.premium .with-border .features-list .feature-wrapper .feature-text-wrapper {
+  text-align: left;
+}
+
+.premium .with-border .features-list .feature-wrapper .feature-text-wrapper ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.premium .paginator {
+  bottom: 150px;
+}
+
+.premium .main-button {
+  margin-top: 90px;
 }
 
 @media (min-width: 992px) {
