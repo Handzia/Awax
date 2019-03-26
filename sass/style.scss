@@ -27,6 +27,7 @@ section {
     text-transform: uppercase;
     border-radius: 27px;
     cursor: pointer;
+    outline: none;
     &:hover {
         background-color: $button-black;
     }
@@ -76,6 +77,23 @@ section {
     bottom: 40px;
     left: 50%;
     transform: translateX(-50%);
+}
+.clients-carousel {
+    .clients-carousel-cell {
+        width: 100%;
+    }
+    .flickity-page-dots .dot {
+        width: 13px;
+        height: 13px;
+        opacity: 1;
+        background: transparent;
+        border: 2px solid $brown;
+        margin-left: 6px;
+        margin-right: 6px;
+    }
+    .flickity-page-dots .dot.is-selected {
+        background: $brown;
+    }
 }
 
 header {
@@ -253,6 +271,7 @@ header {
         color: #fff;
     }
     .team-item {
+        max-width: 400px;
         background-color: #fff;
         margin: 15px;
         padding-top: 50px;
@@ -273,6 +292,9 @@ header {
     background-color: $background-grey;
     .section-subtitle {
         margin-bottom: 60px;
+    }
+    .client-photo {
+        border-radius: 50%;
     }
     .title {
         text-transform: none;
@@ -299,6 +321,7 @@ header {
     border-bottom: 1px solid $lightgrey;
 
     .price-item {
+        max-width: 400px;
         background-color: #fff;
         margin: 15px;
         padding: 35px 15px;
@@ -570,8 +593,9 @@ footer {
         }
     }
     .subscribe {
+        max-width: 400px;
         background-color: $button-black;
-        margin: 0 15px;
+        margin: 8px auto;
         form {
             text-align: center;
             input {
@@ -611,19 +635,38 @@ footer {
             height: 23px;
             border-top: 3px solid #fff;
             border-left: 3px solid #fff;
-            transform: rotate(45deg) translate(3px, 3px);
-            
-            
-            
+            transform: rotate(45deg) translate(3px, 3px);       
         }
     }
 }
-@media (max-width: 1099px) {
+@media (max-width: 991px) {
+    .team .team-item {
+        margin: 15px auto;
+    }
+    footer {
+        .change-order {
+            order: 2;
+        }
+        .media-wrapper {
+            align-items: center;
+            margin-top: 20px;
+        }
+        .text-wrapper {
+            padding-top: 15px;
+            padding-bottom: 15px;
+            text-align: center;
+        }
+    }
+}
+@media (max-width: 1199px) {
     .contact-us .map .contact-data-wrapper {
         max-width: 75%;
     }
 }
 @media (max-width: 767px) {
+    .prices .price-item {
+        margin: 15px auto;
+    }
     .contact-us .form-wrapper .input-group {
         flex-direction: column;
         input {

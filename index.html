@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Awax project</title>
         <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700" rel="stylesheet">
+        <link rel="stylesheet" href="vendor/flickity.min.css" media="screen">
         <link rel="stylesheet" type="text/css" href="css/style.css">
     </head>
     <body>
@@ -199,13 +200,30 @@
             <h2 class="section-title">Happy clients</h2>
             <h4 class="section-subtitle">Client reviews</h4>
             <div class="container">
-                <img src="images/client.png">
-                <h3 class="title">John Doe</h3>
-                <h4>Head of PR Department</h4>
-                <img src="images/quotes.png">
-                <p class="main-text">Nunc augue dui, scelerisque pulvinar sollicitudin id, euismod ac lectus. Sed laoreet sapien et semper posuere. Pellentesque tincidunt convallis tellus ac convallis. Maecenas cursus dapibus mauris, vitae pretium lorem cursus ut. Suspendisse viverra eleifend eleifend.</p>
+                <div class="clients-carousel">
+                    <div class="clients-carousel-cell">
+                        <img class="client-photo" src="images/client.png">
+                        <h3 class="title">John Doe</h3>
+                        <h4>Head of PR Department</h4>
+                        <img src="images/quotes.png">
+                        <p class="main-text">Nunc augue dui, scelerisque pulvinar sollicitudin id, euismod ac lectus. Sed laoreet sapien et semper posuere. Pellentesque tincidunt convallis tellus ac convallis. Maecenas cursus dapibus mauris, vitae pretium lorem cursus ut. Suspendisse viverra eleifend eleifend.</p>
+                    </div>
+                    <div class="clients-carousel-cell">
+                        <img class="client-photo" src="images/client2.png">
+                        <h3 class="title">Sarah Preston</h3>
+                        <h4>Sales manager</h4>
+                        <img src="images/quotes.png">
+                        <p class="main-text">Nunc augue dui, scelerisque pulvinar sollicitudin id, euismod ac lectus. Sed laoreet sapien et semper posuere. Pellentesque tincidunt convallis tellus ac convallis. Maecenas cursus dapibus mauris, vitae pretium lorem cursus ut. Suspendisse viverra eleifend eleifend.</p>
+                    </div>
+                    <div class="clients-carousel-cell">
+                        <img class="client-photo" src="images/client3.png">
+                        <h3 class="title">William Parker</h3>
+                        <h4>Creative Director</h4>
+                        <img src="images/quotes.png">
+                        <p class="main-text">Nunc augue dui, scelerisque pulvinar sollicitudin id, euismod ac lectus. Sed laoreet sapien et semper posuere. Pellentesque tincidunt convallis tellus ac convallis. Maecenas cursus dapibus mauris, vitae pretium lorem cursus ut. Suspendisse viverra eleifend eleifend.</p>
+                    </div>
+                </div>
             </div>
-            <img class="paginator" src="images/paginator.png">
         </section>
         <section class="logos">
             <div class="container">
@@ -434,7 +452,7 @@
         <footer>
             <div class="container">
                 <div class="row">
-                    <div class="col-md-12 col-lg-4">
+                    <div class="col-sm-12 col-lg-4 change-order">
                         <div class="media-wrapper">
                             <div class="media-icons-bar">
                                 <div class="media-icon-wrapper"><img src="images/twitter-icon.png"></div>
@@ -448,12 +466,12 @@
                             <p>AWAX © 2016</p>
                         </div>
                     </div>
-                    <div class="col-md-12 col-lg-4">
+                    <div class="col-sm-12 col-lg-4">
                         <div class="text-wrapper">
                             <p>Nunc augue dui, scelerisque pulvinar sollicitudin id, euismod ac lectus. Sed laoreet sapien et semper posuere. Pellentesque tincidunt convallis tellus ac convallis. Maecenas cursus dapibus mauris, vitae pretium lorem cursus ut. Suspendisse viverra eleifend eleifend. Mauris ut libero eget justo fringilla vehicula. Curabitur fringilla enim sed urna tempus sollicitudin. Curabitur sed massa vitae diam tincidunt pulvinar. Pellentesque varius tincidunt leo. </p>
                         </div>
                     </div>
-                    <div class="col-md-12 col-lg-4">
+                    <div class="col-sm-12 col-lg-4">
                         <div class="subscribe">
                             <form>
                                 <input type="email" placeholder="Email to subscribe">
@@ -476,6 +494,7 @@
                 <button class="close"></button>
             </div>
         </div> -->
+        <script  src="vendor/flickity.pkgd.min.js"></script>
         <script src="js/script.js"></script>
     </body>
 </html>
