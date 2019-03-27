@@ -108,13 +108,46 @@ header {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            ul {
+            .mobile-menu {
+                display: flex;
+                justify-content: space-between;
+                .hamburger {
+                    display: none;
+                    background: black;
+                    width: 25px;
+                    height: 25px;
+                    border: 0;
+                    border-top: 3px solid $lightgrey;
+                    position: relative;
+                    cursor: pointer;
+                    outline: none;
+                    &:hover {
+                        border-top-color: #fff;
+                        &::after, &::before {
+                            border-top-color: #fff;
+                        }
+                    }
+                    &::before, &::after {
+                        display: block;
+                        content: "";
+                        width: 25px;
+                        border-top: 3px solid $lightgrey;
+                        position: absolute;
+                        left: 0;
+                        top: 10px;
+                    }
+                    &::after {
+                        top: 22px;
+                    }
+                }
+            }
+            .menu {
                 display: flex;
                 margin: 0;
                 padding: 0;
                 height: 100px;
                 list-style-type: none;
-                li {
+                .menu-item {
                     display: flex;
                     align-items: center;
                     padding: 0 10px;
@@ -193,6 +226,7 @@ header {
         }
     }
     img {
+        width: 100%;
         cursor: pointer;
     }
 }
@@ -229,7 +263,7 @@ header {
             border-bottom: 4px solid transparent;
             border-top: 4px solid transparent;
             .slider-item {
-                padding: 20px 25px;
+                padding: 20px;
                 font-size: 14px;
                 line-height: 18px;
                 font-weight: 300;
@@ -381,7 +415,9 @@ header {
 .premium {
     position: relative;
     padding-bottom: 60px;
-    
+    .premium-image {
+        width: 100%;
+    }
     .with-border {
         border-bottom: 1px solid $lightgrey;
         .features-list {
@@ -529,7 +565,7 @@ input {
     }
     .map {
         padding-top: 30px;
-        padding-bottom: 30px;
+        padding-bottom: 50px;
         background-image: url(../images/map.png);
         .contact-data-wrapper {
             padding: 30px;
@@ -663,9 +699,100 @@ footer {
         max-width: 75%;
     }
 }
+@media (max-width:1199px) and (min-width: 768px) {
+    header nav .menu-wrapper .menu .hidden-item {
+        display: none;
+    }
+}
 @media (max-width: 767px) {
+    header {
+        nav .menu-wrapper {
+            flex-direction: column;
+            .mobile-menu {
+                width: 100%;
+                padding: 18px;
+                align-items: center;
+                .hamburger {
+                    display: block;
+                }
+            }
+            .menu {
+                flex-direction: column;
+                height: auto;
+                width: 100%;
+                &.hidden {
+                    display: none;
+                }
+                .menu-item {
+                    border-bottom: 0;
+                    border-left: 6px solid black;
+                    &:hover {
+                        border-left: 6px solid $brown;
+                        border-bottom: 0;
+                    }
+                    a {
+                        padding-top: 20px;
+                        padding-bottom: 20px;
+                    }
+                }
+            }
+        }
+        .jumbotron {
+            padding-top: 80px;
+            h1 {
+                font-size: 55px;
+                span {
+                    font-size: 30px;
+                }
+            }
+            p {
+                font-size: 20px
+            }
+            button {
+                margin-bottom: 150px;
+            }
+        }
+    }
+    .projects .menu-slider {
+        flex-direction: column;
+        .slider-item-wrapper {
+            margin-left: 5px;
+            margin-right: 5px;
+            border: 0;
+            &:hover {
+                border: 0;
+            }
+            &.first-item {
+                margin-left: 5px;
+                margin-top: 10px;
+            }
+            &.last-item {
+                margin-right: 5px;
+                margin-bottom: 10px;
+                .slider-item {
+                    border-bottom: 0;
+                }
+            }
+            .slider-item {
+                padding: 15px;
+                border-right: 0;
+                border-bottom: 1px solid $lightgrey;
+                border-left: 6px solid transparent;
+                border-right: 6px solid transparent;
+                &:hover {
+                    border-left: 6px solid $brown;
+                }
+            }
+        }
+    }
     .prices .price-item {
         margin: 15px auto;
+    }
+    .share .share-wrapper .media-icons-bar {
+        padding-left: 0;
+        .number {
+            margin-right: 5px;
+        }
     }
     .contact-us .form-wrapper .input-group {
         flex-direction: column;
