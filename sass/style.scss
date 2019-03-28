@@ -82,24 +82,21 @@ section {
     .clients-carousel-cell {
         width: 100%;
     }
-    .flickity-page-dots .dot {
-        width: 13px;
-        height: 13px;
-        opacity: 1;
-        background: transparent;
-        border: 2px solid $brown;
-        margin-left: 6px;
-        margin-right: 6px;
-    }
-    .flickity-page-dots .dot.is-selected {
-        background: $brown;
-    }
+}
+.flickity-page-dots .dot {
+    width: 13px;
+    height: 13px;
+    opacity: 1;
+    background: transparent;
+    border: 2px solid $brown;
+    margin-left: 6px;
+    margin-right: 6px;
+}
+.flickity-page-dots .dot.is-selected {
+    background: $brown;
 }
 
 header {
-    background-image: url(../images/background-image.png);
-    background-size: cover;
-    background-repeat: no-repeat;
     position: relative;
 
     nav {
@@ -170,51 +167,83 @@ header {
         }    
     }
     .jumbotron {
-        text-align: center;
-        text-transform: uppercase;
         position: relative;
-        background-color: transparent;
-        padding-top: 220px;
-        h1 {
-            color: #fff;
-            font-size: 72px;
-            line-height: 69px;
-            font-weight: bold;
-            span {
-                color: $brown;
+        .jumbotron-content {
+            text-align: center;
+            text-transform: uppercase;
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: transparent;
+            padding-top: 220px;
+            h1 {
+                color: #fff;
+                font-size: 72px;
+                line-height: 69px;
+                font-weight: bold;
+                span {
+                    color: $brown;
+                    word-wrap: break-word;
+                }
+            }
+            p {
+                color: #fff;
+                font-size: 24px;
+                line-height: 18px;
+                font-weight: bold;
+                margin-top: 20px;
+            }
+            button {
+                margin-bottom: 220px;
+                margin-top: 40px;
+                &:hover {
+                    background-color: black;
+                }
+            }    
+        }
+        .jumbotron-carousel {
+            width: 100%;
+            .jumbotron-carousel-cell {
+                width: 100%;  
+            }  
+            .slide2 {
+                background-image: url(../images/background-image2.png);
+                background-size: cover;
+                background-repeat: no-repeat;
+            }
+            .slide3 {
+                background-image: url(../images/team-background.png);
+                background-size: cover;
+                background-repeat: no-repeat;
+            }
+            .slide1 {
+                background-image: url(../images/background-image.png);
+                background-size: cover;
+                background-repeat: no-repeat;
+            }
+            .flickity-page-dots { 
+                bottom: 30px;
             }
         }
-        p {
-            color: #fff;
-            font-size: 24px;
-            line-height: 18px;
-            font-weight: bold;
-            margin-top: 20px;
-        }
-        button {
-            margin-bottom: 220px;
-            margin-top: 40px;
+        .telephone-image-wrapper {
+            width: 65px;
+            height: 65px;
+            border-radius: 50%;
+            background-color: $brown;
+            position: absolute;
+            right: 7vw;
+            bottom: 0;
+            transform: translateY(50%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
             &:hover {
                 background-color: black;
             }
         }
-    }
-    .telephone-image-wrapper {
-        width: 65px;
-        height: 65px;
-        border-radius: 50%;
-        background-color: $brown;
-        position: absolute;
-        right: 7vw;
-        bottom: 0;
-        transform: translateY(50%);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        cursor: pointer;
-        &:hover {
-            background-color: black;
-        }
+
     }
 }
 
@@ -287,8 +316,36 @@ header {
     .img-wrapper {
         width: 100%;
         padding: 15px 15px;
+        position: relative;
+        cursor: pointer;
         img {
             width: 100%;
+            display: block;
+        }
+        .layer {
+            display: none;
+            justify-content: center;
+            flex-direction: column;
+            width: calc(100% - 30px);
+            height: calc(100% - 30px);
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 40px;
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            h4 {
+                color: #fff;
+                text-transform: uppercase;
+                font-weight: 400;
+            }
+            p {
+                color: #fff;
+                font-size: 14px;
+                line-height: 25px;
+            }
+        }
+        &:hover .layer {
+            display: flex;
         }
     }
     .main-button {
@@ -737,7 +794,7 @@ footer {
                 }
             }
         }
-        .jumbotron {
+        .jumbotron-content {
             padding-top: 80px;
             h1 {
                 font-size: 55px;
@@ -804,11 +861,14 @@ footer {
         max-width: 100%;
     }
 }
-
+@media (min-width: 768px) {
+    .media-icons-bar-item {
+        display: flex;
+        align-items: center;
+    }
+}
 @media (min-width: 992px) {
     .about .text-wrapper {
         text-align: left;
     }
 }
-
-

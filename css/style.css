@@ -714,7 +714,7 @@ section {
   width: 100%;
 }
 
-.clients-carousel .flickity-page-dots .dot {
+.flickity-page-dots .dot {
   width: 13px;
   height: 13px;
   opacity: 1;
@@ -724,14 +724,11 @@ section {
   margin-right: 6px;
 }
 
-.clients-carousel .flickity-page-dots .dot.is-selected {
+.flickity-page-dots .dot.is-selected {
   background: #b88b58;
 }
 
 header {
-  background-image: url(../images/background-image.png);
-  background-size: cover;
-  background-repeat: no-repeat;
   position: relative;
 }
 
@@ -823,25 +820,33 @@ header nav .menu-wrapper .menu .menu-item:hover {
 }
 
 header .jumbotron {
+  position: relative;
+}
+
+header .jumbotron .jumbotron-content {
   text-align: center;
   text-transform: uppercase;
-  position: relative;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
   background-color: transparent;
   padding-top: 220px;
 }
 
-header .jumbotron h1 {
+header .jumbotron .jumbotron-content h1 {
   color: #fff;
   font-size: 72px;
   line-height: 69px;
   font-weight: bold;
 }
 
-header .jumbotron h1 span {
+header .jumbotron .jumbotron-content h1 span {
   color: #b88b58;
+  word-wrap: break-word;
 }
 
-header .jumbotron p {
+header .jumbotron .jumbotron-content p {
   color: #fff;
   font-size: 24px;
   line-height: 18px;
@@ -849,16 +854,46 @@ header .jumbotron p {
   margin-top: 20px;
 }
 
-header .jumbotron button {
+header .jumbotron .jumbotron-content button {
   margin-bottom: 220px;
   margin-top: 40px;
 }
 
-header .jumbotron button:hover {
+header .jumbotron .jumbotron-content button:hover {
   background-color: black;
 }
 
-header .telephone-image-wrapper {
+header .jumbotron .jumbotron-carousel {
+  width: 100%;
+}
+
+header .jumbotron .jumbotron-carousel .jumbotron-carousel-cell {
+  width: 100%;
+}
+
+header .jumbotron .jumbotron-carousel .slide2 {
+  background-image: url(../images/background-image2.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+header .jumbotron .jumbotron-carousel .slide3 {
+  background-image: url(../images/team-background.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+header .jumbotron .jumbotron-carousel .slide1 {
+  background-image: url(../images/background-image.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+header .jumbotron .jumbotron-carousel .flickity-page-dots {
+  bottom: 30px;
+}
+
+header .jumbotron .telephone-image-wrapper {
   width: 65px;
   height: 65px;
   border-radius: 50%;
@@ -876,7 +911,7 @@ header .telephone-image-wrapper {
   cursor: pointer;
 }
 
-header .telephone-image-wrapper:hover {
+header .jumbotron .telephone-image-wrapper:hover {
   background-color: black;
 }
 
@@ -959,10 +994,45 @@ header .telephone-image-wrapper:hover {
 .projects .img-wrapper {
   width: 100%;
   padding: 15px 15px;
+  position: relative;
+  cursor: pointer;
 }
 
 .projects .img-wrapper img {
   width: 100%;
+  display: block;
+}
+
+.projects .img-wrapper .layer {
+  display: none;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  width: calc(100% - 30px);
+  height: calc(100% - 30px);
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 40px;
+  position: absolute;
+  top: 15px;
+  left: 15px;
+}
+
+.projects .img-wrapper .layer h4 {
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+
+.projects .img-wrapper .layer p {
+  color: #fff;
+  font-size: 14px;
+  line-height: 25px;
+}
+
+.projects .img-wrapper:hover .layer {
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .projects .main-button {
@@ -1502,19 +1572,19 @@ footer .arrow-wrapper .arrow {
     padding-top: 20px;
     padding-bottom: 20px;
   }
-  header .jumbotron {
+  header .jumbotron-content {
     padding-top: 80px;
   }
-  header .jumbotron h1 {
+  header .jumbotron-content h1 {
     font-size: 55px;
   }
-  header .jumbotron h1 span {
+  header .jumbotron-content h1 span {
     font-size: 30px;
   }
-  header .jumbotron p {
+  header .jumbotron-content p {
     font-size: 20px;
   }
-  header .jumbotron button {
+  header .jumbotron-content button {
     margin-bottom: 150px;
   }
   .projects .menu-slider {
@@ -1568,6 +1638,15 @@ footer .arrow-wrapper .arrow {
   }
   .contact-us .map .contact-data-wrapper {
     max-width: 100%;
+  }
+}
+
+@media (min-width: 768px) {
+  .media-icons-bar-item {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+        align-items: center;
   }
 }
 
