@@ -832,6 +832,7 @@ header .jumbotron .jumbotron-content {
   transform: translateX(-50%);
   background-color: transparent;
   padding-top: 220px;
+  padding-bottom: 220px;
 }
 
 header .jumbotron .jumbotron-content h1 {
@@ -855,7 +856,6 @@ header .jumbotron .jumbotron-content p {
 }
 
 header .jumbotron .jumbotron-content button {
-  margin-bottom: 220px;
   margin-top: 40px;
 }
 
@@ -891,6 +891,10 @@ header .jumbotron .jumbotron-carousel .slide1 {
 
 header .jumbotron .jumbotron-carousel .flickity-page-dots {
   bottom: 30px;
+}
+
+header .jumbotron .jumbotron-carousel .flickity-button {
+  display: none;
 }
 
 header .jumbotron .telephone-image-wrapper {
@@ -1572,20 +1576,18 @@ footer .arrow-wrapper .arrow {
     padding-top: 20px;
     padding-bottom: 20px;
   }
-  header .jumbotron-content {
+  header .jumbotron .jumbotron-content {
     padding-top: 80px;
+    padding-bottom: 80px;
   }
-  header .jumbotron-content h1 {
+  header .jumbotron .jumbotron-content h1 {
     font-size: 55px;
   }
-  header .jumbotron-content h1 span {
+  header .jumbotron .jumbotron-content h1 span {
     font-size: 30px;
   }
-  header .jumbotron-content p {
+  header .jumbotron .jumbotron-content p {
     font-size: 20px;
-  }
-  header .jumbotron-content button {
-    margin-bottom: 150px;
   }
   .projects .menu-slider {
     -ms-flex-direction: column;
