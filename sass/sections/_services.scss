@@ -1,0 +1,20 @@
+.services {
+    background-color: black;
+    
+    .section-title {
+        color: #fff;
+    }
+    .services-item-wrapper {
+        padding: 0 15px;
+
+        .img-wrapper {
+            height: 70px;
+        }
+        .title {
+            color: #fff;
+        }
+        p {
+            color: $lightgrey;
+        }
+    }    
+}

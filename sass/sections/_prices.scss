@@ -1,0 +1,69 @@
+.prices {
+    background-color: $background-grey;
+    padding-bottom: 50px;
+    border-bottom: 1px solid $lightgrey;
+
+    .price-item {
+        max-width: 400px;
+        background-color: #fff;
+        margin: 15px;
+        padding: 35px 15px;
+        .offert-name {
+            font-size: 14px;
+            line-height: 21px;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+        .price {
+            font-size: 30px;
+            line-height: 21px;
+            font-weight: bold;
+            margin-bottom: 0;
+            margin-top: 0;
+        }
+        .month {
+            text-transform: uppercase;
+            font-size: 10px;
+            line-height: 25px;
+            color: $lightgrey;
+            margin-top: 0;
+        }
+        ul {
+            padding: 0;
+            list-style-type: none;
+            text-align: center;
+            li {
+                font-size: 10px;
+                line-height: 27px;
+                color: $grey;
+                position: relative;
+                &::after {
+                    content: "";
+                    display: block;
+                    background-color: $grey;
+                    height: 1px;
+                    width: 10px;
+                    position: absolute;
+                    bottom: 0;
+                    left: 50%;
+                    transform: translateX(-50%);
+                }
+                &.last::after {
+                    display: none;
+                }
+            }
+        }
+        .main-button {
+            background-color: $button-black;
+            &:hover {
+                background-color: $brown;
+            }
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .prices .price-item {
+        margin: 15px auto;
+    }
+}

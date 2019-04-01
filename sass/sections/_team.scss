@@ -1,0 +1,33 @@
+.team {
+    background-image: url(../../images/team-background.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    
+    .section-title {
+        color: #fff;
+    }
+    .team-item {
+        max-width: 400px;
+        background-color: #fff;
+        margin: 15px;
+        padding-top: 50px;
+        padding-bottom: 40px;
+        
+        .team-photo {
+            margin-bottom: 20px;
+        }
+        .title {
+            margin-bottom: 0;
+        }
+        .media-icons-bar {
+            margin-top: 24px;
+        }
+    }
+}
+
+@media (max-width: 991px) {
+    .team .team-item {
+        margin: 15px auto;
+    }
+}

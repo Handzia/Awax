@@ -1,0 +1,35 @@
+.premium {
+    position: relative;
+    padding-bottom: 60px;
+    .premium-image {
+        width: 100%;
+    }
+    .with-border {
+        border-bottom: 1px solid $lightgrey;
+        .features-list {
+            padding-bottom: 35px;
+
+            .feature-wrapper {
+                display: flex;
+                width: 100%;
+                
+                .icon-wrapper {
+                    padding: 25px;
+                }
+                .feature-text-wrapper {
+                    text-align: left;
+                    ul {
+                        list-style-type: none;
+                        padding:0;
+                    }
+                }
+            }
+        }
+    }
+    .paginator {
+        bottom: 150px;
+    }
+    .main-button {
+        margin-top: 90px;
+    }    
+}

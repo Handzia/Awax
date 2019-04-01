@@ -1,0 +1,44 @@
+.jumbotron-carousel {
+    width: 100%;
+    .jumbotron-carousel-cell {
+        width: 100%;  
+    }  
+    .slide2 {
+        background-image: url(../images/background-image2.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    .slide3 {
+        background-image: url(../images/team-background.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    .slide1 {
+        background-image: url(../images/background-image.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    .flickity-page-dots { 
+        bottom: 30px;
+    }
+    .flickity-button {
+        display: none;
+    }
+}
+.clients-carousel {
+    .clients-carousel-cell {
+        width: 100%;
+    }
+}
+.flickity-page-dots .dot {
+    width: 13px;
+    height: 13px;
+    opacity: 1;
+    background: transparent;
+    border: 2px solid $brown;
+    margin-left: 6px;
+    margin-right: 6px;
+}
+.flickity-page-dots .dot.is-selected {
+    background: $brown;
+}

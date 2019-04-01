@@ -1,0 +1,17 @@
+.about .text-wrapper button {
+  margin-top: 40px;
+  margin-bottom: 70px;
+}
+
+.about img {
+  width: 100%;
+  cursor: pointer;
+}
+
+@media (min-width: 992px) {
+  .about .text-wrapper {
+    text-align: left;
+  }
+}
+
+/*# sourceMappingURL=about.css.map */

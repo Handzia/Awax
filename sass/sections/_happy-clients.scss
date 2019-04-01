@@ -1,0 +1,19 @@
+.happy-clients {
+    position: relative;
+    background-color: $background-grey;
+    .section-subtitle {
+        margin-bottom: 60px;
+    }
+    .client-photo {
+        border-radius: 50%;
+    }
+    .title {
+        text-transform: none;
+    }
+    h4 {
+        margin-bottom: 40px;
+    }
+    .main-text {
+        font-weight: 300;
+    }
+}

@@ -1,0 +1,98 @@
+footer {
+    background-color: black;
+    padding-top: 35px;
+    padding-bottom: 35px;
+    position: relative;
+    
+    .media-wrapper {
+        height: 100%;
+        margin: 0 15px;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        .media-icon-wrapper {
+            background-color: $button-black;
+            &:hover {
+                background-color: $brown;
+            }
+        }
+        p {
+            color: #fff;
+            font-size: 14px;
+        }
+    }
+    .text-wrapper {
+        p {
+            font-size: 12px;
+            font-weight: 300;
+            line-height: 21px;
+            color: $lightgrey;
+            margin: 0 15px;;
+        }
+    }
+    .subscribe {
+        max-width: 400px;
+        background-color: $button-black;
+        margin: 8px auto;
+        
+        form {
+            text-align: center;
+            
+            input {
+                text-align: center;
+                width: 70%;
+                &:focus {
+                    border-bottom-color: $grey;
+                }
+            }
+            button {
+                margin-top: 30px;
+                margin-bottom: 50px;
+                &:hover {
+                    background-color: black;
+                }
+            }
+        }
+    }
+    .arrow-wrapper {
+        width: 65px;
+        height: 65px;
+        border-radius: 50%;
+        background-color: $brown;
+        position: absolute;
+        left: 5vw;
+        top: 0;
+        transform: translateY(-50%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+        &:hover {
+            background-color: $button-black;
+        }
+        .arrow {
+            width: 23px;
+            height: 23px;
+            border-top: 3px solid #fff;
+            border-left: 3px solid #fff;
+            transform: rotate(45deg) translate(3px, 3px);       
+        }
+    }
+}
+
+@media (max-width: 991px) {
+    footer {
+        .change-order {
+            order: 2;
+        }
+        .media-wrapper {
+            align-items: center;
+            margin-top: 20px;
+        }
+        .text-wrapper {
+            padding-top: 15px;
+            padding-bottom: 15px;
+            text-align: center;
+        }
+    }
+}
