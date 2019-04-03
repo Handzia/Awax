@@ -3,6 +3,7 @@
 @import "layout";
 @import "variables";
 @import "carousels";
+@import "modals";
 
 @import "sections/header";
 @import "sections/about";
@@ -39,6 +40,7 @@ section {
     border-radius: 27px;
     cursor: pointer;
     outline: none;
+    transition: .4s;
     &:hover {
         background-color: $button-black;
     }
@@ -78,6 +80,7 @@ section {
         align-items: center;
         justify-content: center;
         margin: 3px;
+        transition: .4s;
         &:hover {
             background-color: $brown;
         }

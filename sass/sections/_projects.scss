@@ -43,29 +43,33 @@
             display: block;
         }
         .layer {
-            display: none;
+            display: flex;
             justify-content: center;
             flex-direction: column;
             width: calc(100% - 30px);
             height: calc(100% - 30px);
-            background-color: rgba(0, 0, 0, 0.7);
+            background-color: transparent;
+            transition: 1.5s;
             padding: 40px;
             position: absolute;
             top: 15px;
             left: 15px;
             h4 {
-                color: #fff;
+                color: transparent;
                 text-transform: uppercase;
                 font-weight: 400;
             }
             p {
-                color: #fff;
+                color: transparent;
                 font-size: 14px;
                 line-height: 25px;
             }
         }
         &:hover .layer {
-            display: flex;
+            background-color: rgba(0, 0, 0, 0.7);
+            h4, p {
+                color: #fff;
+            }
         }
     }
     .main-button {

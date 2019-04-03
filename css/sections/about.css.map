@@ -1,9 +1,0 @@
-{
-	"version": 3,
-	"file": "about.css",
-	"sources": [
-		"../../sass/sections/about.scss"
-	],
-	"names": [],
-	"mappings": "AAAA,AAEQ,MAFF,CACF,aAAa,CACT,MAAM,CAAC;EACH,UAAU,EAAE,IAAI;EAChB,aAAa,EAAE,IAAI;CACtB;;AALT,AAOI,MAPE,CAOF,GAAG,CAAC;EACA,KAAK,EAAE,IAAI;EACX,MAAM,EAAE,OAAO;CAClB;;AAGL,MAAM,EAAE,SAAS,EAAE,KAAK;EACpB,AAAA,MAAM,CAAC,aAAa,CAAC;IACjB,UAAU,EAAE,IAAI;GACnB"
-}
