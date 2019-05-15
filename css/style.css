@@ -1124,7 +1124,7 @@ header .jumbotron .telephone-image-wrapper:hover {
 }
 
 .team {
-  background-image: url(../../images/team-background.png);
+  background-image: url(../images/team-background.png);
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
