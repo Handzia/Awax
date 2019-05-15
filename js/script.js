@@ -9,6 +9,16 @@ function hideMenu() {
 const hamburgerButton = document.querySelector('.hamburger');
 hamburgerButton.addEventListener('click', hideMenu);
 
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+    document.querySelector("nav").style.borderBottomColor = "#b88b58";
+  } else {
+    document.querySelector("nav").style.borderBottomColor = "transparent";
+  }
+}
+
 
 // CAROUSELS
 

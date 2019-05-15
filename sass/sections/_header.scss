@@ -7,14 +7,17 @@ header {
         top: 0;
         width: 100%;
         z-index: 100;
+        border-bottom: 2px solid transparent;
 
         .menu-wrapper {
             display: flex;
             justify-content: space-between;
             align-items: center;
+            
             .mobile-menu {
                 display: flex;
                 justify-content: space-between;
+                
                 .hamburger {
                     display: none;
                     background: black;
@@ -51,6 +54,7 @@ header {
                 padding: 0;
                 height: 100px;
                 list-style-type: none;
+                
                 .menu-item {
                     display: flex;
                     align-items: center;
@@ -76,6 +80,7 @@ header {
     }
     .jumbotron {
         position: relative;
+        
         .jumbotron-content {
             text-align: center;
             text-transform: uppercase;
@@ -139,35 +144,48 @@ header {
 
 @media (max-width: 767px) {
     header {
-        nav .menu-wrapper {
-            flex-direction: column;
-            .mobile-menu {
-                width: 100%;
-                padding: 18px;
-                align-items: center;
-                .hamburger {
-                    display: block;
-                }
-            }
-            .menu {
+        .container.menu-wrapper {
+            padding-left: 0;
+            padding-right: 0;
+        }
+        nav {
+            background-color: rgba(0, 0, 0, 0.6);
+            
+            .menu-wrapper {
                 flex-direction: column;
-                height: auto;
-                width: 100%;
+                align-items: flex-start;
                 
-                &.hidden {
-                    display: none;
-                }
-                .menu-item {
-                    border-bottom: 0;
-                    border-left: 6px solid black;
-
-                    &:hover {
-                        border-left: 6px solid $brown;
-                        border-bottom: 0;
+                .mobile-menu {
+                    width: 100%;
+                    padding: 18px;
+                    align-items: center;
+                    background-color: black;
+                    
+                    .hamburger {
+                        display: block;
                     }
-                    a {
-                        padding-top: 20px;
-                        padding-bottom: 20px;
+                }
+                .menu {
+                    flex-direction: column;
+                    height: auto;
+                    width: 60%;
+                    background-color: black;
+                    
+                    &.hidden {
+                        display: none;
+                    }
+                    .menu-item {
+                        border-bottom: 0;
+                        border-left: 6px solid black;
+
+                        &:hover {
+                            border-left: 6px solid $brown;
+                            border-bottom: 0;
+                        }
+                        a {
+                            padding-top: 20px;
+                            padding-bottom: 20px;
+                        }
                     }
                 }
             }
@@ -175,6 +193,7 @@ header {
         .jumbotron .jumbotron-content {
             padding-top: 80px;
             padding-bottom: 80px;
+            
             h1 {
                 font-size: 55px;
                 span {

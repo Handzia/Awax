@@ -747,6 +747,7 @@ header nav {
   top: 0;
   width: 100%;
   z-index: 100;
+  border-bottom: 2px solid transparent;
 }
 
 header nav .menu-wrapper {
@@ -907,15 +908,25 @@ header .jumbotron .telephone-image-wrapper:hover {
 }
 
 @media (max-width: 767px) {
+  header .container.menu-wrapper {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  header nav {
+    background-color: rgba(0, 0, 0, 0.6);
+  }
   header nav .menu-wrapper {
     -ms-flex-direction: column;
         flex-direction: column;
+    -ms-flex-align: start;
+        align-items: flex-start;
   }
   header nav .menu-wrapper .mobile-menu {
     width: 100%;
     padding: 18px;
     -ms-flex-align: center;
         align-items: center;
+    background-color: black;
   }
   header nav .menu-wrapper .mobile-menu .hamburger {
     display: block;
@@ -924,7 +935,8 @@ header .jumbotron .telephone-image-wrapper:hover {
     -ms-flex-direction: column;
         flex-direction: column;
     height: auto;
-    width: 100%;
+    width: 60%;
+    background-color: black;
   }
   header nav .menu-wrapper .menu.hidden {
     display: none;
