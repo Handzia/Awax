@@ -183,7 +183,7 @@ header {
                         display: block;
                         
                         &.invisible {
-                            display: none;;
+                            opacity: 0;
                         }
                     }
                     .close-icon.visible {
@@ -200,7 +200,7 @@ header {
                     top: 93px;
                     
                     &.hidden {
-                        display: none;
+                        visibility: hidden;
                         opacity: 0;
                         top: 80px;
                     }
