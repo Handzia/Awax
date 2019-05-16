@@ -2,12 +2,20 @@
 
 // MOBILE MENU
 
+const hamburgerButton = document.querySelector('.hamburger');
+const closeButton = document.querySelector('.close-icon');
 
 function hideMenu() {
   document.querySelector('.menu').classList.toggle('hidden');
+  closeButton.classList.toggle('visible');
+  hamburgerButton.classList.toggle('invisible');
 }
-const hamburgerButton = document.querySelector('.hamburger');
+
 hamburgerButton.addEventListener('click', hideMenu);
+closeButton.addEventListener('click', hideMenu);
+
+
+// ADD BORDER-BOTTOM FOR MENU ON SCROLL
 
 window.onscroll = function() {scrollFunction()};
 

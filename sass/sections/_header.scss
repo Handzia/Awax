@@ -17,10 +17,11 @@ header {
             .mobile-menu {
                 display: flex;
                 justify-content: space-between;
+                position: relative;
                 
                 .hamburger {
                     display: none;
-                    background: black;
+                    background: transparent;
                     width: 25px;
                     height: 25px;
                     border: 0;
@@ -28,12 +29,7 @@ header {
                     position: relative;
                     cursor: pointer;
                     outline: none;
-                    &:hover {
-                        border-top-color: #fff;
-                        &::after, &::before {
-                            border-top-color: #fff;
-                        }
-                    }
+                    
                     &::before, &::after {
                         display: block;
                         content: "";
@@ -47,6 +43,28 @@ header {
                         top: 22px;
                     }
                 }
+                .close-icon {
+                    display: none;
+                    width: 30px;
+                    height: 3px;
+                    position: absolute;
+                    top: 45px;
+                    right: 24px;
+                    background-color: $lightgrey;
+                    transform: rotate(45deg);
+
+                    &::after {
+                        display: block;
+                        content: "";
+                        width: 30px;
+                        height: 3px;
+                        position: absolute;
+                        top: 0;
+                        right: 0;
+                        background-color: $lightgrey;
+                        transform: rotate(90deg);
+                    }
+                }
             }
             .menu {
                 display: flex;
@@ -54,6 +72,7 @@ header {
                 padding: 0;
                 height: 100px;
                 list-style-type: none;
+                transition: 0.7s;
                 
                 .menu-item {
                     display: flex;
@@ -148,35 +167,48 @@ header {
             padding-left: 0;
             padding-right: 0;
         }
-        nav {
-            background-color: rgba(0, 0, 0, 0.6);
-            
+        nav {            
             .menu-wrapper {
                 flex-direction: column;
                 align-items: flex-start;
+                position: relative;
                 
                 .mobile-menu {
                     width: 100%;
-                    padding: 18px;
+                    padding: 18px 26px;
                     align-items: center;
                     background-color: black;
                     
                     .hamburger {
                         display: block;
+                        
+                        &.invisible {
+                            display: none;;
+                        }
+                    }
+                    .close-icon.visible {
+                        display: block;
                     }
                 }
                 .menu {
                     flex-direction: column;
-                    height: auto;
+                    height: calc(100vh - 93px);
                     width: 60%;
                     background-color: black;
+                    opacity: 1;
+                    position: absolute;
+                    top: 93px;
                     
                     &.hidden {
                         display: none;
+                        opacity: 0;
+                        top: 80px;
                     }
                     .menu-item {
                         border-bottom: 0;
                         border-left: 6px solid black;
+                        max-height: 60px;
+                        padding: 0 20px;
 
                         &:hover {
                             border-left: 6px solid $brown;

@@ -764,11 +764,12 @@ header nav .menu-wrapper .mobile-menu {
   display: flex;
   -ms-flex-pack: justify;
       justify-content: space-between;
+  position: relative;
 }
 
 header nav .menu-wrapper .mobile-menu .hamburger {
   display: none;
-  background: black;
+  background: transparent;
   width: 25px;
   height: 25px;
   border: 0;
@@ -776,14 +777,6 @@ header nav .menu-wrapper .mobile-menu .hamburger {
   position: relative;
   cursor: pointer;
   outline: none;
-}
-
-header nav .menu-wrapper .mobile-menu .hamburger:hover {
-  border-top-color: #fff;
-}
-
-header nav .menu-wrapper .mobile-menu .hamburger:hover::after, header nav .menu-wrapper .mobile-menu .hamburger:hover::before {
-  border-top-color: #fff;
 }
 
 header nav .menu-wrapper .mobile-menu .hamburger::before, header nav .menu-wrapper .mobile-menu .hamburger::after {
@@ -800,6 +793,29 @@ header nav .menu-wrapper .mobile-menu .hamburger::after {
   top: 22px;
 }
 
+header nav .menu-wrapper .mobile-menu .close-icon {
+  display: none;
+  width: 30px;
+  height: 3px;
+  position: absolute;
+  top: 45px;
+  right: 24px;
+  background-color: #bebebe;
+  transform: rotate(45deg);
+}
+
+header nav .menu-wrapper .mobile-menu .close-icon::after {
+  display: block;
+  content: "";
+  width: 30px;
+  height: 3px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: #bebebe;
+  transform: rotate(90deg);
+}
+
 header nav .menu-wrapper .menu {
   display: -ms-flexbox;
   display: flex;
@@ -807,6 +823,7 @@ header nav .menu-wrapper .menu {
   padding: 0;
   height: 100px;
   list-style-type: none;
+  transition: 0.7s;
 }
 
 header nav .menu-wrapper .menu .menu-item {
@@ -912,18 +929,16 @@ header .jumbotron .telephone-image-wrapper:hover {
     padding-left: 0;
     padding-right: 0;
   }
-  header nav {
-    background-color: rgba(0, 0, 0, 0.6);
-  }
   header nav .menu-wrapper {
     -ms-flex-direction: column;
         flex-direction: column;
     -ms-flex-align: start;
         align-items: flex-start;
+    position: relative;
   }
   header nav .menu-wrapper .mobile-menu {
     width: 100%;
-    padding: 18px;
+    padding: 18px 26px;
     -ms-flex-align: center;
         align-items: center;
     background-color: black;
@@ -931,19 +946,32 @@ header .jumbotron .telephone-image-wrapper:hover {
   header nav .menu-wrapper .mobile-menu .hamburger {
     display: block;
   }
+  header nav .menu-wrapper .mobile-menu .hamburger.invisible {
+    display: none;
+  }
+  header nav .menu-wrapper .mobile-menu .close-icon.visible {
+    display: block;
+  }
   header nav .menu-wrapper .menu {
     -ms-flex-direction: column;
         flex-direction: column;
-    height: auto;
+    height: calc(100vh - 93px);
     width: 60%;
     background-color: black;
+    opacity: 1;
+    position: absolute;
+    top: 93px;
   }
   header nav .menu-wrapper .menu.hidden {
     display: none;
+    opacity: 0;
+    top: 80px;
   }
   header nav .menu-wrapper .menu .menu-item {
     border-bottom: 0;
     border-left: 6px solid black;
+    max-height: 60px;
+    padding: 0 20px;
   }
   header nav .menu-wrapper .menu .menu-item:hover {
     border-left: 6px solid #b88b58;
