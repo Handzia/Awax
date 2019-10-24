@@ -3,7 +3,7 @@ It's the responsive landing page created based on the provided graphic design.
 
 ## Demo:
 
-https://handzia.github.io/Awax/
+https://annaszmyga.github.io/Awax/
 
 ## Get started:
 
